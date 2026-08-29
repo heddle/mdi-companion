@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mdi_radar — Mapping Companion | MDI Companion</title>
+<link rel="icon" href="../images/mdilogo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../images/mdilogo.png" alt="MDI logo"> MDI Companion</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="mdi.html" class="active">Projects</a>
+      <a href="../documentation.html">Documentation</a>
+      <a href="../errata.html">Errata</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <span class="badge">Companion &middot; Chapter 7</span>
+  <h1>mdi_radar</h1>
+  <p class="lede">A standalone radar/map demonstration application, built on the mapping
+  chapter&rsquo;s <code>MapView2D</code> architecture.</p>
+
+  <p><a href="https://github.com/heddle/mdi_radar">github.com/heddle/mdi_radar</a></p>
+
+  <h2>What It Demonstrates</h2>
+  <p>mdi_radar extends the MDI map view with radar-specific tools and content, showing how a
+  domain-specific application can sit on top of the general mapping layer without modifying it:</p>
+  <ul>
+    <li>Radar preset tools and a dedicated button palette (<code>RadarButton</code>,
+    <code>RadarButtonPalette</code>)</li>
+    <li>Map-native radar items (<code>RadarItem</code>) with basing and parameter models
+    (<code>RadarBasing</code>, <code>RadarParameters</code>)</li>
+    <li>ETOPO5 terrain/bathymetry shading, loaded from MDI&rsquo;s bundled classpath resources</li>
+    <li>Terrain-aware line-of-sight visualization, using great-circle geodesy
+    (<code>Geodesy</code>) and a Plate Carr&eacute;e projection</li>
+  </ul>
+
+  <h2>Try It</h2>
+  <pre><code>git clone https://github.com/heddle/mdi_radar.git
+cd mdi_radar
+mvn install
+mvn exec:java -Dexec.mainClass=edu.cnu.mdi.radar.app.RadarApp</code></pre>
+
+  <h2>Dependency</h2>
+  <p>mdi_radar depends on the core <code>mdi</code> framework (currently tracking
+  <code>1.2.2-SNAPSHOT</code>, moving to the released <code>1.2.2</code> at publication).</p>
+</main>
+
+<footer class="site-footer">
+  <p>MDI Companion Site &middot; source on <a href="https://github.com/heddle/mdi-companion">GitHub</a>
+  &middot; core framework by <a href="https://github.com/heddle">David Heddle</a></p>
+</footer>
+
+</body>
+</html>

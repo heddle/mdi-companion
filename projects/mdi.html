@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mdi — Core Framework | MDI Companion</title>
+<link rel="icon" href="../images/mdilogo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../images/mdilogo.png" alt="MDI logo"> MDI Companion</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="mdi.html" class="active">Projects</a>
+      <a href="../documentation.html">Documentation</a>
+      <a href="../errata.html">Errata</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <span class="badge">Core Framework &middot; Chapters 1&ndash;9</span>
+  <h1>mdi</h1>
+  <p class="lede">The core MDI framework: application and desktop management, views, drawable
+  items, toolbars, plotting, mapping, simulation, and optimization.</p>
+
+  <p><a href="https://github.com/heddle/mdi">github.com/heddle/mdi</a></p>
+
+  <h2>What It Covers</h2>
+  <table>
+    <tr><th>Chapter</th><th>Topic</th><th>Key classes</th></tr>
+    <tr><td>1</td><td>Architecture overview</td><td>Application &rarr; Desktop &rarr; View &rarr; Container &rarr; Layer &rarr; Item</td></tr>
+    <tr><td>2</td><td>Creating the application</td><td><code>BaseMDIApplication</code></td></tr>
+    <tr><td>3</td><td>Creating views</td><td><code>BaseView</code></td></tr>
+    <tr><td>4</td><td>Drawable items</td><td><code>AItem</code>, <code>PointItem</code>, <code>LineItem</code>, <code>PolygonItem</code>, <code>PolylineItem</code>, <code>RectangleItem</code>, <code>EllipseItem</code>, <code>RadArcItem</code>, <code>TextItem</code>, <code>ImageItem</code>, <code>ConnectorItem</code></td></tr>
+    <tr><td>5</td><td>Toolbars and rubberbanding</td><td><code>AToolBar</code>, <code>BaseToolBar</code>, <code>ToolBits</code>, <code>IToolHandler</code>, <code>GestureContext</code></td></tr>
+    <tr><td>6</td><td>Plotting (sPlot)</td><td><code>PlotView</code>, <code>PlotPanel</code>, <code>PlotCanvas</code>, <code>PlotToolHandler</code>, <code>ACurve</code>, <code>XYPlotBuilder</code>, <code>PlotDeck</code></td></tr>
+    <tr><td>7</td><td>Mapping</td><td><code>MapView2D</code>, <code>MapContainer</code>, <code>IMapProjection</code>, <code>ShapefileLayer</code>, <code>MapLayerStyle</code></td></tr>
+    <tr><td>8</td><td>Simulation</td><td><code>Simulation</code>, <code>SimulationEngine</code>, <code>SimulationContext</code></td></tr>
+    <tr><td>9</td><td>Optimization</td><td>simulated annealing and genetic-algorithm demos, built as specialized simulations</td></tr>
+  </table>
+
+  <h2>Try It</h2>
+  <pre><code>git clone https://github.com/heddle/mdi.git
+cd mdi
+mvn install
+mvn exec:java -Dexec.mainClass=edu.cnu.mdi.app.DemoApp</code></pre>
+  <p><code>DemoApp</code> opens a virtual desktop preloaded with a drawing view, a map view, a
+  plot view, and several simulation/optimization demos (network decluttering, traveling-salesperson
+  simulated annealing, image evolution via a genetic algorithm, and a geometry-slice view) — a
+  useful first stop before reading the chapters in detail.</p>
+
+  <h2>Maven Coordinates</h2>
+  <p>Released versions are published on Maven Central under <code>io.github.heddle</code>.</p>
+  <pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;io.github.heddle&lt;/groupId&gt;
+    &lt;artifactId&gt;mdi&lt;/artifactId&gt;
+    &lt;version&gt;1.2.2&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+  <p>Check <a href="https://central.sonatype.com/artifact/io.github.heddle/mdi">Maven Central</a>
+  for the latest released version.</p>
+
+  <h2>API Documentation</h2>
+  <p>Full Javadoc is available <a href="../javadocs/index.html">here</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <p>MDI Companion Site &middot; source on <a href="https://github.com/heddle/mdi-companion">GitHub</a>
+  &middot; core framework by <a href="https://github.com/heddle">David Heddle</a></p>
+</footer>
+
+</body>
+</html>

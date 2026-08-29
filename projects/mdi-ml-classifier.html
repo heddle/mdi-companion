@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mdi-ml-classifier — Capstone | MDI Companion</title>
+<link rel="icon" href="../images/mdilogo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../images/mdilogo.png" alt="MDI logo"> MDI Companion</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="mdi.html" class="active">Projects</a>
+      <a href="../documentation.html">Documentation</a>
+      <a href="../errata.html">Errata</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <span class="badge">Capstone &middot; Chapter 11</span>
+  <h1>mdi-ml-classifier</h1>
+  <p class="lede">The book&rsquo;s closing application: an end-to-end image-classification tool
+  combining the MDI desktop framework, Swing, sPlot, and ONNX Runtime.</p>
+
+  <p><a href="https://github.com/heddle/mdi-ml-classifier">github.com/heddle/mdi-ml-classifier</a></p>
+
+  <h2>What It Demonstrates</h2>
+  <p>This is intentionally the most application-focused example in the book &mdash; it shows what
+  an application built on MDI looks like once the individual pieces are no longer introduced one
+  at a time:</p>
+  <ul>
+    <li>Loading and swapping external ONNX models at runtime, without restarting the application</li>
+    <li>Background inference with proper cancellation of stale work when a new image or model
+    supersedes an in-flight request</li>
+    <li>Configurable input preprocessing and per-model normalization settings</li>
+    <li>A recent-images and recent-models list, each model retaining its own labels path and
+    normalization</li>
+    <li>Recovery from invalid startup conditions &mdash; a missing model at launch doesn&rsquo;t
+    prevent the application from starting; it opens a model chooser instead</li>
+  </ul>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Java 17 or newer</li>
+    <li>The core <code>mdi</code> framework, installed locally or via Maven Central</li>
+    <li>An ONNX image-classification model (not bundled &mdash; see below)</li>
+  </ul>
+
+  <h2>Try It</h2>
+  <p>The default model location is <code>models/mobilenetv2-12.onnx</code>; the ImageNet label
+  file is already included at <code>models/imagenet_labels.txt</code>. Large model binaries are
+  not committed to the repository &mdash; obtain MobileNet V2 from the ONNX Model Zoo, or supply
+  another compatible single-input, single-output RGB classifier.</p>
+  <pre><code>git clone https://github.com/heddle/mdi-ml-classifier.git
+cd mdi-ml-classifier
+mvn clean package
+mvn exec:java \
+  -Dexec.mainClass=edu.cnu.mdi.mlclassifier.app.ClassifierApp \
+  -Dexec.args="--model=/path/to/model.onnx --labels=/path/to/labels.txt"</code></pre>
+  <p>Open an image by dropping it onto the classifier view, or via <strong>Image &gt; Open
+  Image&hellip;</strong>. Use <strong>Model &gt; Open ONNX Model&hellip;</strong> to load or
+  replace the classifier without restarting.</p>
+</main>
+
+<footer class="site-footer">
+  <p>MDI Companion Site &middot; source on <a href="https://github.com/heddle/mdi-companion">GitHub</a>
+  &middot; core framework by <a href="https://github.com/heddle">David Heddle</a></p>
+</footer>
+
+</body>
+</html>

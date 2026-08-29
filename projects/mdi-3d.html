@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mdi-3D — 3D Extension | MDI Companion</title>
+<link rel="icon" href="../images/mdilogo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../images/mdilogo.png" alt="MDI logo"> MDI Companion</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="mdi.html" class="active">Projects</a>
+      <a href="../documentation.html">Documentation</a>
+      <a href="../errata.html">Errata</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <span class="badge">Extension &middot; Chapter 10</span>
+  <h1>mdi-3D</h1>
+  <p class="lede">A JOGL-based extension that brings three-dimensional visualization into the same
+  application, view, and simulation architecture used throughout the book.</p>
+
+  <p><a href="https://github.com/heddle/mdi-3D">github.com/heddle/mdi-3D</a></p>
+
+  <h2>What It Demonstrates</h2>
+  <ul>
+    <li>3D views (<code>GLJPanel</code>-based) coexisting with ordinary 2D MDI views in one
+    application — the demo app includes a plain 2D drawing view alongside its 3D scenes.</li>
+    <li>Correct threading discipline at the JOGL/Swing boundary: rendering callbacks stay off the
+    EDT except where Swing state is actually touched.</li>
+    <li>Optional Phong (<code>GL_LIGHT0</code>) lighting, opt-in per item via
+    <code>setLighted(boolean)</code>.</li>
+    <li>Graceful degradation: if OpenGL isn&rsquo;t available, 3D panels fall back to an
+    explanatory placeholder instead of failing to launch.</li>
+    <li>Reuse of core <code>mdi</code> infrastructure — image capture/clipboard export, keyboard
+    handling, view-info metadata — rather than reinventing it for 3D.</li>
+  </ul>
+
+  <h2>Demo Views</h2>
+  <table>
+    <tr><th>View</th><th>What it shows</th></tr>
+    <tr><td>Rotating MDI logo</td><td>Independently tilting, lit panels with a precessing rotation axis</td></tr>
+    <tr><td>Aizawa attractor</td><td>A chaotic strange-attractor simulation rendered as an evolving 3D trajectory</td></tr>
+    <tr><td>Kinetics demo</td><td>A live simulation driving 3D geometry via <code>SimulationEngine</code></td></tr>
+    <tr><td>Scatter plot 3D</td><td>3D point-cloud rendering, including lit-sphere point markers</td></tr>
+    <tr><td>Geometry slice</td><td>Interactive cross-sections through a 3D solid</td></tr>
+    <tr><td>Globe</td><td>A lazily-loaded 3D globe view</td></tr>
+    <tr><td>2D drawing view</td><td>An ordinary 2D <code>DrawingView</code>, included to show 2D and 3D coexisting</td></tr>
+  </table>
+
+  <h2>Keyboard Controls</h2>
+  <p>3D views use a consistent key binding scheme (rotation, reset, refresh) routed through a
+  single <code>KeyAdapter3D</code>/<code>KeyBindings3D</code> pair — see the project
+  <a href="https://github.com/heddle/mdi-3D#readme">README</a> for the full list.</p>
+
+  <h2>Try It</h2>
+  <pre><code>git clone https://github.com/heddle/mdi-3D.git
+cd mdi-3D
+mvn install
+mvn exec:java -Dexec.mainClass=edu.cnu.mdi.mdi3D.app.DemoApp3D</code></pre>
+
+  <h2>Maven Coordinates</h2>
+  <p>Targeting a v1.1.0 release on Maven Central (<code>io.github.heddle:mdi-3d</code>) close to
+  publication; check <a href="https://central.sonatype.com/artifact/io.github.heddle/mdi-3d">Maven
+  Central</a> for the currently released version.</p>
+</main>
+
+<footer class="site-footer">
+  <p>MDI Companion Site &middot; source on <a href="https://github.com/heddle/mdi-companion">GitHub</a>
+  &middot; core framework by <a href="https://github.com/heddle">David Heddle</a></p>
+</footer>
+
+</body>
+</html>

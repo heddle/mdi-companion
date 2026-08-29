@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDI — A Java Framework for Scientific Visualization</title>
+<meta name="description" content="Companion site for the Apress book on MDI, a Java framework for building interactive desktop applications for scientific visualization, simulation, and related technical work.">
+<link rel="icon" href="images/mdilogo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><img src="images/mdilogo.png" alt="MDI logo"> MDI Companion</a>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects/mdi.html">Projects</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="errata.html">Errata</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>MDI</h1>
+  <p class="lede">A Java framework for building interactive desktop applications for scientific
+  visualization, simulation, and related technical work — and the companion site for the Apress
+  book that teaches it.</p>
+
+  <p>MDI (pronounced &ldquo;midi&rdquo;) organizes an application around independent views hosted
+  in a common desktop: drawings, plots, maps, simulations, optimization problems, three-dimensional
+  scenes, images, and application-specific scientific content. The framework supplies the recurring
+  infrastructure — application and view management, menus and toolbars, drawable items, coordinate
+  systems, plotting, mapping, simulation control, background execution, optimization support, and
+  3D visualization — so the application developer can focus on the science.</p>
+
+  <div class="note">
+    <strong>About this site.</strong> This page collects the source code, API documentation, and
+    errata for the book&rsquo;s example projects. The book itself is published separately by
+    Apress; this site is not a substitute for it.
+  </div>
+
+  <h2>The Projects</h2>
+  <p>Four repositories accompany the book. Each is a runnable, standalone Maven project.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="badge">Core &middot; Ch. 1&ndash;9</span>
+      <h3>mdi</h3>
+      <p>The core framework: application and desktop management, views, drawable items, toolbars
+      and rubberbanding, the sPlot plotting package, 2D mapping, and the simulation and
+      optimization engines.</p>
+      <div class="card-links">
+        <a href="projects/mdi.html">Details &rarr;</a>
+        <a href="https://github.com/heddle/mdi">GitHub</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="badge">Extension &middot; Ch. 10</span>
+      <h3>mdi-3D</h3>
+      <p>A JOGL-based 3D extension. 3D views coexist with ordinary MDI views in the same
+      application and reuse the framework&rsquo;s application, simulation, and image-export
+      infrastructure.</p>
+      <div class="card-links">
+        <a href="projects/mdi-3d.html">Details &rarr;</a>
+        <a href="https://github.com/heddle/mdi-3D">GitHub</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="badge">Companion &middot; Ch. 7</span>
+      <h3>mdi_radar</h3>
+      <p>A standalone radar/map demonstration: radar preset tools, map-native radar items, ETOPO5
+      terrain shading, and terrain-aware line-of-sight visualization, built on the mapping
+      chapter&rsquo;s architecture.</p>
+      <div class="card-links">
+        <a href="projects/mdi-radar.html">Details &rarr;</a>
+        <a href="https://github.com/heddle/mdi_radar">GitHub</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="badge">Capstone &middot; Ch. 11</span>
+      <h3>mdi-ml-classifier</h3>
+      <p>The book&rsquo;s closing application: an image-classification tool covering external
+      model inference, background execution, cancellation of stale work, and model comparison,
+      built entirely on the framework introduced in earlier chapters.</p>
+      <div class="card-links">
+        <a href="projects/mdi-ml-classifier.html">Details &rarr;</a>
+        <a href="https://github.com/heddle/mdi-ml-classifier">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>How the Book Is Organized</h2>
+  <div class="roadmap">
+    <div class="part">
+      <div class="part-label">Foundations</div>
+      <div class="chapters">Ch. 1 The MDI Architecture &middot; Ch. 2 Creating the Application
+      &middot; Ch. 3 Creating Views &middot; Ch. 4 Items</div>
+    </div>
+    <div class="part">
+      <div class="part-label">Two-Dimensional Visualization</div>
+      <div class="chapters">Ch. 5 Toolbars and Rubberbanding &middot; Ch. 6 Plotting (sPlot)
+      &middot; Ch. 7 Mapping</div>
+    </div>
+    <div class="part">
+      <div class="part-label">Computation</div>
+      <div class="chapters">Ch. 8 Simulation &middot; Ch. 9 Optimization</div>
+    </div>
+    <div class="part">
+      <div class="part-label">Extensions &amp; Capstone</div>
+      <div class="chapters">Ch. 10 MDI-3D &middot; Ch. 11 Machine-Learning Image Classification</div>
+    </div>
+  </div>
+
+  <h2>Get Started</h2>
+  <p>Each project builds with Maven and requires Java 17 or later. Clone a repository and run its
+  demo application, e.g.:</p>
+  <pre><code>git clone https://github.com/heddle/mdi.git
+cd mdi
+mvn install
+mvn exec:java -Dexec.mainClass=edu.cnu.mdi.app.DemoApp</code></pre>
+  <p>See each project&rsquo;s page for its specific entry point and dependencies.</p>
+</main>
+
+<footer class="site-footer">
+  <p>MDI Companion Site &middot; source on <a href="https://github.com/heddle/mdi-companion">GitHub</a>
+  &middot; core framework by <a href="https://github.com/heddle">David Heddle</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* MDI companion site — shared stylesheet */
+
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f6f7f9;
+  --text: #1c2128;
+  --text-dim: #57606a;
+  --border: #d8dee4;
+  --accent: #1a5fb4;
+  --accent-dim: #e8f0fb;
+  --code-bg: #f0f2f5;
+  --radius: 8px;
+  --maxw: 920px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c;
+    --bg-alt: #1b1f26;
+    --text: #e6e8eb;
+    --text-dim: #9aa4af;
+    --border: #2d333b;
+    --accent: #6ea8fe;
+    --accent-dim: #1c2b41;
+    --code-bg: #1c2128;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+
+.header-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand img { height: 30px; width: 30px; }
+
+nav.site-nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  margin-left: 1.25rem;
+  font-size: 0.95rem;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a.active {
+  color: var(--accent);
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+h1 { font-size: 2rem; margin-bottom: 0.4rem; }
+h2 { font-size: 1.4rem; margin-top: 2.5rem; }
+h3 { font-size: 1.1rem; margin-top: 1.75rem; }
+
+p.lede {
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  max-width: 65ch;
+}
+
+a { color: var(--accent); }
+
+code, pre {
+  background: var(--code-bg);
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+code { padding: 0.15em 0.4em; }
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+pre code { padding: 0; background: none; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  background: var(--bg-alt);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card h3 { margin: 0; font-size: 1.05rem; }
+
+.card p { margin: 0; color: var(--text-dim); font-size: 0.92rem; flex-grow: 1; }
+
+.card .card-links { display: flex; gap: 0.9rem; font-size: 0.85rem; margin-top: 0.4rem; }
+
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.2em 0.55em;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: var(--bg-alt); }
+
+.roadmap {
+  border-left: 3px solid var(--accent);
+  margin-top: 1.5rem;
+  padding-left: 1.25rem;
+}
+
+.roadmap .part {
+  margin-bottom: 1.4rem;
+}
+
+.roadmap .part-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  margin-bottom: 0.25rem;
+}
+
+.roadmap .chapters { color: var(--text-dim); font-size: 0.92rem; }
+
+.note {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  background: var(--accent-dim);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.9rem 1.1rem;
+  margin: 1.5rem 0;
+  font-size: 0.94rem;
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding: 1.75rem 1.25rem;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+footer.site-footer a { color: var(--text-dim); }
