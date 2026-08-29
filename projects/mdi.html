@@ -44,6 +44,32 @@
     <tr><td>9</td><td>Optimization</td><td>simulated annealing and genetic-algorithm demos, built as specialized simulations</td></tr>
   </table>
 
+  <h2>Gallery</h2>
+  <p>Figures from the Optimization chapter (9), showing the simulated-annealing and
+  genetic-algorithm demos in action.</p>
+  <div class="gallery-grid">
+    <figure>
+      <a href="../images/gallery/sa-vs-ga-concept.jpg"><img src="../images/gallery/sa-vs-ga-concept.jpg" alt="Diagram contrasting simulated annealing and genetic algorithms"></a>
+      <figcaption>Simulated annealing vs. genetic algorithms: a single evolving candidate vs. a population evolving through selection, crossover, and mutation.</figcaption>
+    </figure>
+    <figure>
+      <a href="../images/gallery/tsp-before-after.jpg"><img src="../images/gallery/tsp-before-after.jpg" alt="TSP demo view before and after simulated annealing"></a>
+      <figcaption><code>TspDemoView</code> before and after simulated annealing &mdash; a tangled initial tour converges to a near-optimal one as temperature cools.</figcaption>
+    </figure>
+    <figure>
+      <a href="../images/gallery/tsp-energy-plot.jpg"><img src="../images/gallery/tsp-energy-plot.jpg" alt="Energy vs. temperature plot for the TSP demo"></a>
+      <figcaption>Energy vs. temperature for the TSP run, plotted live with the sPlot package.</figcaption>
+    </figure>
+    <figure>
+      <a href="../images/gallery/ga-pipeline.jpg"><img src="../images/gallery/ga-pipeline.jpg" alt="Genetic algorithm generation pipeline diagram"></a>
+      <figcaption>One <code>Simulation.step()</code> as a GA generation: selection &rarr; crossover &rarr; mutation &rarr; evaluation &rarr; replacement.</figcaption>
+    </figure>
+    <figure>
+      <a href="../images/gallery/image-evolution-demo.jpg"><img src="../images/gallery/image-evolution-demo.jpg" alt="Image evolution demo approximating a target image with triangles"></a>
+      <figcaption><code>ImageEvolutionDemoView</code> evolving a population of triangle-based images toward a target, with best/mean error tracked per generation.</figcaption>
+    </figure>
+  </div>
+
   <h2>Try It</h2>
   <pre><code>git clone https://github.com/heddle/mdi.git
 cd mdi

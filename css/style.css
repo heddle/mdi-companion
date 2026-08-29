@@ -185,6 +185,34 @@ th { background: var(--bg-alt); }
 
 .roadmap .chapters { color: var(--text-dim); font-size: 0.92rem; }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+
+.gallery-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--border);
+}
+
+.gallery-grid figcaption {
+  padding: 0.7rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
 .note {
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
