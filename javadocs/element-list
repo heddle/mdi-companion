@@ -1,10 +1,12 @@
 edu.cnu.mdi.app
 edu.cnu.mdi.component
+edu.cnu.mdi.component.checkboxarray
 edu.cnu.mdi.container
 edu.cnu.mdi.desktop
 edu.cnu.mdi.dialog
 edu.cnu.mdi.feedback
 edu.cnu.mdi.format
+edu.cnu.mdi.geometry
 edu.cnu.mdi.graphics
 edu.cnu.mdi.graphics.connection
 edu.cnu.mdi.graphics.drawable
@@ -14,6 +16,7 @@ edu.cnu.mdi.graphics.style.ui
 edu.cnu.mdi.graphics.toolbar
 edu.cnu.mdi.graphics.world
 edu.cnu.mdi.hover
+edu.cnu.mdi.io
 edu.cnu.mdi.item
 edu.cnu.mdi.json
 edu.cnu.mdi.log
@@ -21,6 +24,7 @@ edu.cnu.mdi.mapping
 edu.cnu.mdi.mapping.container
 edu.cnu.mdi.mapping.graphics
 edu.cnu.mdi.mapping.item
+edu.cnu.mdi.mapping.layer
 edu.cnu.mdi.mapping.loader
 edu.cnu.mdi.mapping.milsym
 edu.cnu.mdi.mapping.projection
@@ -28,7 +32,6 @@ edu.cnu.mdi.mapping.render
 edu.cnu.mdi.mapping.shapefile
 edu.cnu.mdi.mapping.theme
 edu.cnu.mdi.mapping.util
-edu.cnu.mdi.properties
 edu.cnu.mdi.pseudo3D
 edu.cnu.mdi.sim
 edu.cnu.mdi.sim.demo.network
@@ -37,6 +40,7 @@ edu.cnu.mdi.sim.ga.triimage
 edu.cnu.mdi.sim.simanneal
 edu.cnu.mdi.sim.simanneal.heuristics
 edu.cnu.mdi.sim.simanneal.tspdemo
+edu.cnu.mdi.sim.task
 edu.cnu.mdi.sim.ui
 edu.cnu.mdi.splot.edit
 edu.cnu.mdi.splot.example
@@ -52,4 +56,6 @@ edu.cnu.mdi.ui.fonts
 edu.cnu.mdi.ui.menu
 edu.cnu.mdi.util
 edu.cnu.mdi.view
-edu.cnu.mdi.view.demo
+edu.cnu.mdi.view.demo.geoslice
+edu.cnu.mdi.view.demo.layout
+edu.cnu.mdi.workspace
