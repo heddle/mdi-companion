@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mdi-nbody — Simulation Example | MDI Companion</title>
+<meta name="description" content="An interactive N-body gravitational simulation demonstrating MDI simulation, items, linked views, and scientific diagnostics.">
+<link rel="icon" href="../images/mdilogo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../images/mdilogo.png" alt="MDI logo"> MDI Companion</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="mdi.html" class="active">Projects</a>
+      <a href="figures.html">Figures</a>
+      <a href="../documentation.html">Documentation</a>
+      <a href="../errata.html">Errata</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <span class="badge">Simulation example &middot; Chapter 8</span>
+  <h1>mdi-nbody</h1>
+  <p class="lede">An interactive two-dimensional N-body application showing how MDI connects a
+  numerical simulation to editable scientific items, linked views, and live diagnostics.</p>
+
+  <p><a href="https://github.com/heddle/mdi-nbody">github.com/heddle/mdi-nbody</a></p>
+
+  <h2>What It Demonstrates</h2>
+  <p>mdi-nbody builds a complete scientific application around MDI&rsquo;s simulation and view
+  architecture:</p>
+  <ul>
+    <li>A worker-owned gravitational model publishing immutable snapshots to Swing views</li>
+    <li>Start, pause, resume, stop, reset, and single-step lifecycle control</li>
+    <li>Masses represented as selectable MDI items that can be dragged, edited, or deleted while
+    the simulation is not running</li>
+    <li>Interactive construction of custom systems, including graphical velocity editing and
+    versioned JSON save and open</li>
+    <li>Linked sPlot views for energy and angular-momentum error, plus a selected-body inspector</li>
+    <li>Reproducible presets ranging from stable two-body motion to chaotic multi-star systems</li>
+  </ul>
+
+  <h2 id="gallery">Gallery</h2>
+  <div class="gallery-grid">
+    <figure>
+      <a href="../images/gallery/nbody-trisolaris-demo.png"><img src="../images/gallery/nbody-trisolaris-demo.png" alt="MDI N-body application showing three massive suns, a small planet, orbital trails, energy, angular-momentum error, and selected-body diagnostics"></a>
+      <figcaption>The gravitational model depicted is our best guess at the Trisolaris system from
+      Cixin Liu&rsquo;s acclaimed trilogy beginning with <em>The Three-Body Problem</em>.</figcaption>
+    </figure>
+  </div>
+
+  <h2>Try It</h2>
+  <pre><code>git clone https://github.com/heddle/mdi-nbody.git
+cd mdi-nbody
+mvn compile exec:java</code></pre>
+
+  <h2>Dependency</h2>
+  <p>mdi-nbody requires Java 17 or newer and the core <code>mdi</code> framework. Install the
+  compatible MDI revision locally before building if it is not already available through Maven.</p>
+</main>
+
+<footer class="site-footer">
+  <p>MDI Companion Site &middot; source on <a href="https://github.com/heddle/mdi-companion">GitHub</a>
+  &middot; core framework by <a href="https://github.com/heddle">David Heddle</a></p>
+</footer>
+
+</body>
+</html>

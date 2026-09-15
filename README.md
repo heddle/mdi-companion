@@ -8,7 +8,7 @@ Live site: https://heddle.github.io/mdi-companion/ (once Pages is enabled — se
 ## What's here
 
 - `index.html`, `about.html`, `documentation.html`, `errata.html` — the site pages
-- `projects/` — one page per companion repository (`mdi`, `mdi-3D`, `mdi_radar`, `mdi-ml-classifier`)
+- `projects/` — one page per companion repository (`mdi`, `mdi-3D`, `mdi_radar`, `mdi-nbody`, `mdi-ml-classifier`)
 - `javadocs/` — a copy of the generated `mdi` API docs
 - `css/style.css` — the one stylesheet the whole site shares
 - `.nojekyll` — tells GitHub Pages to serve the files as-is, with no Jekyll processing
