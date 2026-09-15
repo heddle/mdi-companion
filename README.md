@@ -47,13 +47,13 @@ repository, and then return each source repository to `develop`:
 ```bash
 cd ~/mdi
 git switch --detach v1.2.3
-mvn -P '!release' clean javadoc:javadoc
+mvn -Prelease clean javadoc:javadoc
 rsync -a --delete target/site/apidocs/ ~/mdi-companion/javadocs/
 git switch develop
 
 cd ~/mdi-3D
 git switch --detach v1.0.2
-mvn -P '!release' clean javadoc:javadoc
+mvn -Prelease clean javadoc:javadoc
 rsync -a --delete target/site/apidocs/ ~/mdi-companion/javadocs-3d/
 git switch develop
 
@@ -61,6 +61,7 @@ cd ~/mdi-companion
 git status --short
 ```
 
-(`-P '!release'` avoids the GPG-signing profile used for Maven Central releases,
-which otherwise hangs waiting for a passphrase. `rsync --delete` also removes pages for APIs
-that no longer exist, so review `git status` before committing.)
+`-Prelease` selects the pinned Javadoc plugin and its doclint configuration. Because this command
+runs only `clean` followed by the direct `javadoc:javadoc` goal, it does not reach the `verify`
+phase and therefore does not run GPG signing. `rsync --delete` also removes pages for APIs that no
+longer exist, so review `git status` before committing.
