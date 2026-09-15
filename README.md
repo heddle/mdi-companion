@@ -3,13 +3,14 @@
 Companion website for the Apress book on **MDI**, a Java framework for
 scientific visualization, simulation, and related technical work.
 
-Live site: https://heddle.github.io/mdi-companion/ (once Pages is enabled — see below)
+Live site: https://heddle.github.io/mdi-companion/
 
 ## What's here
 
 - `index.html`, `about.html`, `documentation.html`, `errata.html` — the site pages
-- `projects/` — one page per companion repository (`mdi`, `mdi-3D`, `mdi_radar`, `mdi-nbody`, `mdi-ml-classifier`)
+- `projects/` — one page per companion repository (`mdi`, `mdi-3D`, `mdi-radar`, `mdi-nbody`, `mdi-ml-classifier`)
 - `javadocs/` — a copy of the generated `mdi` API docs
+- `javadocs-3d/` — a copy of the generated `mdi-3D` API docs
 - `css/style.css` — the one stylesheet the whole site shares
 - `.nojekyll` — tells GitHub Pages to serve the files as-is, with no Jekyll processing
 
@@ -38,14 +39,28 @@ git push
 
 GitHub Pages picks up the new commit automatically within a minute or so.
 
-## Regenerating the mdi Javadoc
+## Regenerating the release Javadocs
 
-From the `mdi` project:
+Generate the documentation from the exact release tags used by the book, copy it into this
+repository, and then return each source repository to `develop`:
 
 ```bash
-mvn -P '!release' javadoc:javadoc
-cp -R target/site/apidocs/* ../mdi-companion/javadocs/
+cd ~/mdi
+git switch --detach v1.2.3
+mvn -P '!release' clean javadoc:javadoc
+rsync -a --delete target/site/apidocs/ ~/mdi-companion/javadocs/
+git switch develop
+
+cd ~/mdi-3D
+git switch --detach v1.0.2
+mvn -P '!release' clean javadoc:javadoc
+rsync -a --delete target/site/apidocs/ ~/mdi-companion/javadocs-3d/
+git switch develop
+
+cd ~/mdi-companion
+git status --short
 ```
 
 (`-P '!release'` avoids the GPG-signing profile used for Maven Central releases,
-which otherwise hangs waiting for a passphrase.)
+which otherwise hangs waiting for a passphrase. `rsync --delete` also removes pages for APIs
+that no longer exist, so review `git status` before committing.)

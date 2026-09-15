@@ -30,7 +30,8 @@
   <p class="lede">An interactive two-dimensional N-body application showing how MDI connects a
   numerical simulation to editable scientific items, linked views, and live diagnostics.</p>
 
-  <p><a href="https://github.com/heddle/mdi-nbody">github.com/heddle/mdi-nbody</a></p>
+  <p><a href="https://github.com/heddle/mdi-nbody">github.com/heddle/mdi-nbody</a> &middot;
+  <a href="https://github.com/heddle/mdi-nbody/releases/tag/v1.0.0">v1.0.0 release</a></p>
 
   <h2>What It Demonstrates</h2>
   <p>mdi-nbody builds a complete scientific application around MDI&rsquo;s simulation and view
@@ -50,19 +51,21 @@
   <div class="gallery-grid">
     <figure>
       <a href="../images/gallery/nbody-trisolaris-demo.png"><img src="../images/gallery/nbody-trisolaris-demo.png" alt="MDI N-body application showing three massive suns, a small planet, orbital trails, energy, angular-momentum error, and selected-body diagnostics"></a>
-      <figcaption>The gravitational model depicted is our best guess at the Trisolaris system from
-      Cixin Liu&rsquo;s acclaimed trilogy beginning with <em>The Three-Body Problem</em>.</figcaption>
+      <figcaption>An educational interpretation of the Trisolaris system from Cixin Liu&rsquo;s
+      acclaimed trilogy beginning with <em>The Three-Body Problem</em>, rather than a claim about
+      canonical initial data.</figcaption>
     </figure>
   </div>
 
   <h2>Try It</h2>
   <pre><code>git clone https://github.com/heddle/mdi-nbody.git
 cd mdi-nbody
+mvn clean verify
 mvn compile exec:java</code></pre>
 
   <h2>Dependency</h2>
-  <p>mdi-nbody requires Java 17 or newer and the core <code>mdi</code> framework. Install the
-  compatible MDI revision locally before building if it is not already available through Maven.</p>
+  <p>mdi-nbody requires Java 17 or newer and MDI 1.2.3, which Maven resolves automatically from
+  Maven Central; no local MDI installation is required.</p>
 </main>
 
 <footer class="site-footer">

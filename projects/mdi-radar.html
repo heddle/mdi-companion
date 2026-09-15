@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mdi_radar — Mapping Companion | MDI Companion</title>
+<title>mdi-radar — Mapping Companion | MDI Companion</title>
 <link rel="icon" href="../images/mdilogo.png">
 <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -25,14 +25,15 @@
 
 <main>
   <span class="badge">Companion &middot; Chapter 7</span>
-  <h1>mdi_radar</h1>
+  <h1>mdi-radar</h1>
   <p class="lede">A standalone radar/map demonstration application, built on the mapping
   chapter&rsquo;s <code>MapView2D</code> architecture.</p>
 
-  <p><a href="https://github.com/heddle/mdi_radar">github.com/heddle/mdi_radar</a></p>
+  <p><a href="https://github.com/heddle/mdi-radar">github.com/heddle/mdi-radar</a> &middot;
+  <a href="https://github.com/heddle/mdi-radar/releases/tag/v1.0.0">v1.0.0 release</a></p>
 
   <h2>What It Demonstrates</h2>
-  <p>mdi_radar extends the MDI map view with radar-specific tools and content, showing how a
+  <p>mdi-radar extends the MDI map view with radar-specific tools and content, showing how a
   domain-specific application can sit on top of the general mapping layer without modifying it:</p>
   <ul>
     <li>Radar preset tools and a dedicated button palette (<code>RadarButton</code>,
@@ -53,14 +54,13 @@
   </div>
 
   <h2>Try It</h2>
-  <pre><code>git clone https://github.com/heddle/mdi_radar.git
-cd mdi_radar
-mvn install
+  <pre><code>git clone https://github.com/heddle/mdi-radar.git
+cd mdi-radar
+mvn clean verify
 mvn exec:java -Dexec.mainClass=edu.cnu.mdi.radar.app.RadarApp</code></pre>
 
   <h2>Dependency</h2>
-  <p>mdi_radar depends on the core <code>mdi</code> framework, currently the released
-  <code>1.2.2</code>.</p>
+  <p>mdi-radar depends on MDI 1.2.3, which Maven resolves automatically from Maven Central.</p>
 </main>
 
 <footer class="site-footer">

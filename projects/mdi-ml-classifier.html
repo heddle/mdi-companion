@@ -29,7 +29,8 @@
   <p class="lede">The book&rsquo;s closing application: an end-to-end image-classification tool
   combining the MDI desktop framework, Swing, sPlot, and ONNX Runtime.</p>
 
-  <p><a href="https://github.com/heddle/mdi-ml-classifier">github.com/heddle/mdi-ml-classifier</a></p>
+  <p><a href="https://github.com/heddle/mdi-ml-classifier">github.com/heddle/mdi-ml-classifier</a>
+  &middot; <a href="https://github.com/heddle/mdi-ml-classifier/releases/tag/v1.0.1">v1.0.1 release</a></p>
 
   <h2>What It Demonstrates</h2>
   <p>This is intentionally the most application-focused example in the book &mdash; it shows what
@@ -40,6 +41,7 @@
     <li>Background inference with proper cancellation of stale work when a new image or model
     supersedes an in-flight request</li>
     <li>Configurable input preprocessing and per-model normalization settings</li>
+    <li>Configurable top-K results, comparison history, and clipboard or CSV export</li>
     <li>A recent-images and recent-models list, each model retaining its own labels path and
     normalization</li>
     <li>Recovery from invalid startup conditions &mdash; a missing model at launch doesn&rsquo;t
@@ -57,7 +59,7 @@
   <h2>Requirements</h2>
   <ul>
     <li>Java 17 or newer</li>
-    <li>The core <code>mdi</code> framework, installed locally or via Maven Central</li>
+    <li>MDI 1.2.3, resolved automatically from Maven Central</li>
     <li>An ONNX image-classification model (not bundled &mdash; see below)</li>
   </ul>
 
