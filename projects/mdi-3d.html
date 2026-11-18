@@ -29,7 +29,8 @@
   <p class="lede">A JOGL-based extension that brings three-dimensional visualization into the same
   application, view, and simulation architecture used throughout the book.</p>
 
-  <p><a href="https://github.com/heddle/mdi-3D">github.com/heddle/mdi-3D</a></p>
+  <p><a href="https://github.com/heddle/mdi-3D">github.com/heddle/mdi-3D</a>
+  &middot; <strong>Book release: 1.0.3</strong></p>
 
   <h2>What It Demonstrates</h2>
   <ul>
@@ -44,6 +45,10 @@
     <li>Reuse of core <code>mdi</code> infrastructure — image capture/clipboard export, keyboard
     handling, view-info metadata — rather than reinventing it for 3D.</li>
   </ul>
+
+  <p>The 1.0.3 release includes the Kinetics simulation correction that publishes stable
+  particle-coordinate snapshots for rendering, avoiding concurrent access to actively
+  updated simulation arrays.</p>
 
   <h2>Demo Views</h2>
   <table>
@@ -97,11 +102,11 @@ mvn exec:java -Dexec.mainClass=edu.cnu.mdi.mdi3D.app.DemoApp3D</code></pre>
   <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;io.github.heddle&lt;/groupId&gt;
     &lt;artifactId&gt;mdi-3d&lt;/artifactId&gt;
-    &lt;version&gt;1.0.2&lt;/version&gt;
+    &lt;version&gt;1.0.3&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
-  <p>MDI-3D 1.0.2 depends on MDI 1.2.3. See
-  <a href="https://central.sonatype.com/artifact/io.github.heddle/mdi-3d">Maven Central</a> for the
-  artifact listing or the <a href="https://github.com/heddle/mdi-3D/releases/tag/v1.0.2">v1.0.2
+  <p>MDI-3D 1.0.3 depends on MDI 1.2.4. See
+  <a href="https://central.sonatype.com/artifact/io.github.heddle/mdi-3d/1.0.3">Maven Central</a> for the
+  artifact listing or the <a href="https://github.com/heddle/mdi-3D/tree/v1.0.3">v1.0.3
   release</a> for the book&rsquo;s exact source.</p>
   <p>Full Javadoc is available <a href="../javadocs-3d/index.html">here</a>.</p>
 </main>

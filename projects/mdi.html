@@ -29,7 +29,8 @@
   <p class="lede">The core MDI framework: application and desktop management, views, drawable
   items, toolbars, plotting, mapping, simulation, and optimization.</p>
 
-  <p><a href="https://github.com/heddle/mdi">github.com/heddle/mdi</a></p>
+  <p><a href="https://github.com/heddle/mdi">github.com/heddle/mdi</a>
+  &middot; <strong>Book release: 1.2.4</strong></p>
 
   <h2>What It Covers</h2>
   <table>
@@ -44,6 +45,14 @@
     <tr><td>8</td><td>Simulation</td><td><code>Simulation</code>, <code>SimulationEngine</code>, <code>SimulationContext</code></td></tr>
     <tr><td>9</td><td>Optimization</td><td>simulated annealing and genetic-algorithm demos, built as specialized simulations</td></tr>
   </table>
+
+  <h2>Features in MDI 1.2.4</h2>
+  <p>Item editing includes undo and redo for supported operations such as moving, resizing,
+  rotating, and changing styles or text. Supported creation and deletion actions can also be
+  recorded by undo-aware workflows. The sPlot package adds CSV import and export for numerical
+  XY curve data, including optional y-errors; JSON remains available to save and restore full
+  plots. Core MDI now uses Gson rather than Jackson and FlatLaf Extras for SVG support instead
+  of Apache Batik.</p>
 
   <h2 id="gallery">Gallery</h2>
   <p>Figures from the Optimization chapter (9), showing the simulated-annealing and
@@ -86,11 +95,11 @@ mvn exec:java -Dexec.mainClass=edu.cnu.mdi.app.DemoApp</code></pre>
   <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;io.github.heddle&lt;/groupId&gt;
     &lt;artifactId&gt;mdi&lt;/artifactId&gt;
-    &lt;version&gt;1.2.3&lt;/version&gt;
+    &lt;version&gt;1.2.4&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
-  <p>Check <a href="https://central.sonatype.com/artifact/io.github.heddle/mdi">Maven Central</a>
+  <p>Check <a href="https://central.sonatype.com/artifact/io.github.heddle/mdi/1.2.4">Maven Central</a>
   for the artifact listing. The book release is
-  <a href="https://github.com/heddle/mdi/releases/tag/v1.2.3">v1.2.3</a>.</p>
+  <a href="https://github.com/heddle/mdi/tree/v1.2.4">v1.2.4</a>.</p>
 
   <h2>API Documentation</h2>
   <p>Full Javadoc is available <a href="../javadocs/index.html">here</a>.</p>
