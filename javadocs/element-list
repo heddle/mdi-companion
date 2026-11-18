@@ -54,6 +54,7 @@ edu.cnu.mdi.transfer
 edu.cnu.mdi.ui.colors
 edu.cnu.mdi.ui.fonts
 edu.cnu.mdi.ui.menu
+edu.cnu.mdi.undo
 edu.cnu.mdi.util
 edu.cnu.mdi.view
 edu.cnu.mdi.view.demo.geoslice
