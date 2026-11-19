@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDI Chaos Lab — Lorenz Attractor | MDI Companion</title>
+<meta name="description" content="Explore the Lorenz attractor with linked 2D and 3D views, live divergence plots, and Lyapunov estimates.">
+<link rel="icon" href="../images/mdilogo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../images/mdilogo.png" alt="MDI logo"> MDI Companion</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="mdi.html" class="active">Projects</a>
+      <a href="figures.html">Figures</a>
+      <a href="../documentation.html">Documentation</a>
+      <a href="../errata.html">Errata</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>MDI Chaos Lab</h1>
+  <p class="lede">Explore how two Lorenz trajectories that start almost at the same point
+    diverge over time. Follow both trajectories in a 2D projection or open the rotating 3D view.</p>
+
+  <p><a href="https://github.com/heddle/mdi-chaos">View mdi-chaos on GitHub</a></p>
+
+  <h2 id="gallery">Gallery</h2>
+  <div class="gallery-grid">
+    <figure>
+      <a href="../images/gallery/chaos-lab-3d.png"><img src="../images/gallery/chaos-lab-3d.png"
+        alt="Rotating 3D Lorenz trajectories alongside the 2D projection, time series, and divergence diagnostics"
+        width="1804" height="1015"></a>
+      <figcaption>MDI Chaos Lab paused near simulation time 50. Chaos Diagnostics shows a fit
+        over times 15 to 30 and the running largest Lyapunov exponent estimate.</figcaption>
+    </figure>
+  </div>
+
+  <h2>Try It</h2>
+  <pre><code>git clone https://github.com/heddle/mdi-chaos.git
+cd mdi-chaos
+mvn clean verify
+mvn exec:java</code></pre>
+  <p>The app requires Java 17 or newer and uses MDI 1.2.4. The optional 3D view uses
+    MDI-3D 1.0.3 and requires OpenGL.</p>
+</main>
+
+<footer class="site-footer">
+  <p>MDI Companion Site &middot; source on <a href="https://github.com/heddle/mdi-companion">GitHub</a>
+  &middot; core framework by <a href="https://github.com/heddle">David Heddle</a></p>
+</footer>
+
+</body>
+</html>
