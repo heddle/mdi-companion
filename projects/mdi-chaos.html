@@ -48,6 +48,43 @@
     </figure>
   </div>
 
+  <h2 id="preset-comparison">Guided comparison</h2>
+  <p>How does changing &rho; affect two trajectories that start almost together?
+    These runs were exported from MDI Chaos Lab v1.0.6. Both use &sigma; = 10,
+    &beta; = 8/3, <var>dt</var> = 0.005, and an initial separation of 10<sup>&minus;8</sup>.</p>
+
+  <ul>
+    <li><a href="../data/mdi-chaos/classic-chaotic.csv" download>Download Classic chaotic CSV</a> (&rho; = 28)</li>
+    <li><a href="../data/mdi-chaos/fixed-point.csv" download>Download Fixed point CSV</a> (&rho; = 0.5)</li>
+  </ul>
+
+  <ol>
+    <li>Choose <strong>Classic chaotic</strong>, enable <strong>Estimate Lyapunov exponent</strong>,
+      then click <strong>Reset</strong> and <strong>Start</strong>. Pause at or just after
+      simulation time 50.</li>
+    <li>In Chaos Diagnostics, set <strong>Fit start</strong> to 15 and <strong>Fit end</strong>
+      to 30. Click <strong>Fit</strong>, then <strong>Export CSV</strong>.</li>
+    <li>Repeat with <strong>Fixed point</strong>, keeping Lyapunov estimation enabled and using
+      the same fit interval. Plot <code>log_divergence</code> against <code>time</code> for both
+      CSVs on the same axes. Compare the trend between 15 and 30 and what happens after 30.</li>
+  </ol>
+
+  <table>
+    <thead>
+      <tr><th scope="col">Measurement</th><th scope="col">Classic chaotic</th><th scope="col">Fixed point</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Fit slope over [15, 30], per time unit</th><td>+0.98328</td><td>&minus;0.47506</td></tr>
+      <tr><th scope="row">Lyapunov estimate over 40 time units after warm-up</th><td>+0.83123</td><td>&minus;0.47506</td></tr>
+      <tr><th scope="row">Separation at time 50</th><td>5.92</td><td>2.14 &times; 10<sup>&minus;20</sup></td></tr>
+    </tbody>
+  </table>
+
+  <p>The classic run&rsquo;s log divergence rises through the fit interval and later fluctuates
+    as separation reaches the scale of the attractor. In the fixed-point run, the trajectories
+    approach the origin and their separation shrinks. The fit describes the selected interval.
+    The Lyapunov estimate uses repeated perturbation rescaling and can change as the run continues.</p>
+
   <h2>Build from source</h2>
   <pre><code>git clone https://github.com/heddle/mdi-chaos.git
 cd mdi-chaos
