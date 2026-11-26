@@ -8,7 +8,7 @@ Live site: https://heddle.github.io/mdi-companion/
 ## What's here
 
 - `index.html`, `about.html`, `documentation.html`, `errata.html` — the site pages
-- `projects/` — one page per companion repository (`mdi`, `mdi-3D`, `mdi-radar`, `mdi-nbody`, `mdi-chaos`, `mdi-ml-classifier`)
+- `projects/` — one page per companion repository (`mdi`, `mdi-3D`, `mdi-radar`, `mdi-nbody`, `mdi-chaos`, `mdi-ml-classifier`, `mdi-optics`)
 - `javadocs/` — a copy of the generated `mdi` API docs
 - `javadocs-3d/` — a copy of the generated `mdi-3D` API docs
 - `css/style.css` — the one stylesheet the whole site shares

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Bench — Laser Puzzle | MDI Companion</title>
+<meta name="description" content="A laser puzzle built on MDI: steer the beam onto every detector with mirrors, beam splitters and lenses.">
+<link rel="icon" href="../images/mdilogo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../images/mdilogo.png" alt="MDI logo"> MDI Companion</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="mdi.html" class="active">Projects</a>
+      <a href="figures.html">Figures</a>
+      <a href="../documentation.html">Documentation</a>
+      <a href="../errata.html">Errata</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Light Bench</h1>
+  <p class="lede">A laser puzzle built on MDI. Steer the beam onto every detector with
+    mirrors, beam splitters, and converging and diverging lenses, across nine levels.</p>
+
+  <p><a href="https://github.com/heddle/mdi-optics">View mdi-optics on GitHub</a> &middot;
+    <a href="https://github.com/heddle/mdi-optics/releases/latest">Latest release</a></p>
+
+  <p><a href="https://github.com/heddle/mdi-optics/releases/latest/download/mdi-optics-runnable.zip">Download the latest runnable ZIP</a></p>
+  <p>Extract the ZIP, open a terminal in the extracted folder, and run
+    <code>java -jar mdi-optics.jar</code>. Use Java 17 or newer and keep the bundled
+    <code>lib</code> folder next to the JAR. No Maven build is required.</p>
+
+  <p>Before publication, the release workflow smoke-tests the runnable ZIP on Linux, Windows, Intel macOS, and Apple Silicon macOS with Java 17, launching it without Maven.</p>
+
+  <h2>How to Play</h2>
+  <p>Click a piece in the palette, then click a grid point to place it. Drag a piece to move
+    it, and double-click it to turn it. Undo and redo work for every move. The number under a
+    detector is the share of the laser&rsquo;s power it needs.</p>
+
+  <h2 id="gallery">Gallery</h2>
+  <div class="gallery-grid">
+    <figure>
+      <a href="../images/gallery/light-bench-focus.png"><img src="../images/gallery/light-bench-focus.png"
+        alt="Three parallel laser rays pass through a converging lens and meet on a small detector"
+        width="1728" height="920"></a>
+      <figcaption>Level 6 solved: a converging lens four squares from a small detector brings all
+        three rays together. The selected lens shows its focal points.</figcaption>
+    </figure>
+    <figure>
+      <a href="../images/gallery/light-bench-walls.png"><img src="../images/gallery/light-bench-walls.png"
+        alt="A laser below a long wall, two detectors above it, and a palette with mirrors and a splitter"
+        width="1728" height="920"></a>
+      <figcaption>Level 4 before any pieces are placed: each detector needs half the beam, and
+        a long wall stands between them and the laser.</figcaption>
+    </figure>
+  </div>
+
+  <h2>What It Demonstrates</h2>
+  <ul>
+    <li>Optical pieces as draggable, rotatable MDI items, with MDI&rsquo;s undo and redo</li>
+    <li>A palette of drawn toggle buttons (<code>DrawnToggleButton</code>) in place of icons</li>
+    <li>A ray tracer kept separate from the Swing code, with levels defined in JSON files</li>
+  </ul>
+
+  <h2>Build from source</h2>
+  <pre><code>git clone https://github.com/heddle/mdi-optics.git
+cd mdi-optics
+mvn compile exec:java</code></pre>
+  <p>The game requires Java 17 or newer and uses MDI 1.2.5, which Maven resolves
+    automatically from Maven Central.</p>
+</main>
+
+<footer class="site-footer">
+  <p>MDI Companion Site &middot; source on <a href="https://github.com/heddle/mdi-companion">GitHub</a>
+  &middot; core framework by <a href="https://github.com/heddle">David Heddle</a></p>
+</footer>
+
+</body>
+</html>
